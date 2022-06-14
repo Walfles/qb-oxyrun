@@ -39,7 +39,7 @@ RegisterNetEvent('qb-oxyrun:plysy', function()
     TriggerServerEvent('qb-oxyrun:removebeer')
     CreateBlip()
     TriggerEvent("QBCore:Notify", "A location has been pinged on your GPS.")
-    known = "Yes"
+    known = true
     TriggerEvent('qb-oxyruns:SendEmail')
 end)
 
