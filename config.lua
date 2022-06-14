@@ -7,19 +7,19 @@ Config.MinimumOxyRunPolice = 0
 
 -- Location of ped
 Config.Location = {
-    ["homelessmanPed"] = {
-    ["ped"] = 'a_m_o_soucent_03',
-    ["scenario"] = "WORLD_HUMAN_BUM_STANDING",
-    ["coords"] = vector4(716.63, -699.74, 26.55, 244.75)
+    ["BeerMan"] = {
+    	["ped"] = 'a_m_o_soucent_03',
+    	["scenario"] = "WORLD_HUMAN_BUM_STANDING",
+    	["coords"] = vector4(716.63, -699.74, 26.55, 244.75)
     },
     ["2ndman"] = {
-    ["scenario"] = "WORLD_HUMAN_CLIPBOARD",
-    ["ped"] = 'a_m_y_bevhills_01',
-    ["label"] = "The Man",
-    ["blipsprite"] = 615,
-    ["showblip"] = true,
-    ["blipcolor"] = 0,
-    ["coords"] = vector4(-77.17, 369.53, 112.46, 135.03)
+    	["scenario"] = "WORLD_HUMAN_CLIPBOARD",
+    	["ped"] = 'a_m_y_bevhills_01',
+    	["label"] = "The Man",
+    	["blipsprite"] = 615,
+    	["showblip"] = true,
+    	["blipcolor"] = 0,
+    	["coords"] = vector4(-77.17, 369.53, 112.46, 135.03)
     }
 }
 
