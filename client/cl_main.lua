@@ -53,7 +53,7 @@ AddEventHandler('qb-oxyrun:checkifhasitem', function()
     TriggerEvent('qb-oxyruns:SendEmail')
     print("Player Started!")
         else
-            TriggerEvent("QBCore:Notify", "You have no beer!", "error")
+            TriggerEvent("QBCore:Notify", "You dont have beer!", "error")
         end
     end)
 end)
