@@ -33,8 +33,7 @@ exports['qb-target']:AddTargetModel(Config.Ped1, {
             type = "client",
             event = "qb-oxyrun:checkingforpolice",
             icon = "fa-solid fa-beer-mug-empty",
-            label = "Talk To Man",
-            item = 'beer',
+            label = "Talk To Man"
         },
 	},
 	distance = 2.5,
@@ -49,8 +48,8 @@ exports['qb-target']:AddTargetModel(Config.Ped2, {
         {
             type = "client",
             event = "qb-oxyrun:onlistcheck",
-            icon = "fa-solid fa-clipboard", -- Thinking of clipboard icon for this one
-            label = "Check If You Are On The List",
+            icon = "fa-solid fa-clipboard",
+            label = "Check If You Are On The List"
         },
 	},
 	distance = 2.5,
