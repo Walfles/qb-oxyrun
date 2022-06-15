@@ -18,6 +18,6 @@ server_scripts {
 
 -- Dependecies
 dependency {
-	'nh-context', -- https://github.com/nerohiro/nh-context/releases/
+    'nh-context', -- https://github.com/nerohiro/nh-context/releases/
     'qb-target' -- https://github.com/qbcore-framework/qb-target/releases/
 }
