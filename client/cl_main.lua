@@ -2,6 +2,7 @@
 print("Made with love by Walfles <3")
 
 -- Variables
+local QBCore = exports['qb-core']:GetCoreObject()
 known = nil
 
 -- Deleting Blip
@@ -35,12 +36,26 @@ local function PoliceCall()
 end
 
 -- If Player Said Yes
-RegisterNetEvent('qb-oxyrun:plysy', function()
+RegisterNetEvent('qb-oxyrun:plysy')
+AddEventHandler('qb-oxyrun:plysy', function()
+    TriggerEvent('qb-oxyrun:checkifhasitem')
+end)
+
+-- Checking If Player Has Item
+RegisterNetEvent('qb-oxyrun:checkifhasitem')
+AddEventHandler('qb-oxyrun:checkifhasitem', function()
+    QBCore.Functions.TriggerCallback('qb-oxyrun:hasBeer', function(HasBeer)
+        if HasBeer then
     TriggerServerEvent('qb-oxyrun:removebeer')
     CreateBlip()
     TriggerEvent("QBCore:Notify", "A location has been pinged on your GPS.")
     known = true
     TriggerEvent('qb-oxyruns:SendEmail')
+    print("Player Started!")
+        else
+            TriggerEvent("QBCore:Notify", "You have no beer!", "error")
+        end
+    end)
 end)
 
 -- If Player Selected No
@@ -65,4 +80,11 @@ RegisterNetEvent('qb-oxyrun:takeoxy', function()
     PoliceCall()
     known = nil
     DeleteBlip()
+end)
+
+-- NUICALLBACK
+RegisterNUICallback('HasBeer', function(data, cb)
+    QBCore.Functions.TriggerCallback('qb-oxyrun:hasBeer', function(HasBeer)
+        cb(HasBeer)
+    end)
 end)
