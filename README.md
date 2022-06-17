@@ -18,3 +18,5 @@ All Source code
 Alerts Cops
 
 Minimum cops allowed to be set in config.lua
+
+Different Locations (Random)
