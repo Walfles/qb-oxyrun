@@ -13,7 +13,8 @@ client_scripts {
 
 -- Server Files
 server_scripts {
-    'server/sv_*.lua'
+    'server/sv_*.lua',
+    'config.lua'
 }
 
 -- Dependecies
