@@ -1,28 +1,13 @@
 -- Walfles
 print("Made with love by Walfles <3")
 
--- Variables
+-- Variable
 local QBCore = exports['qb-core']:GetCoreObject()
-known = nil
-
--- Deleting Blip
-local function DeleteBlip()
-	if DoesBlipExist(blip) then
-		RemoveBlip(blip)
-	end
-end
-
---Creating Blip
-local function CreateBlip()
-	DeleteBlip()
-	blip = AddBlipForCoord(-77.17, 369.53, 112.46)
-    SetBlipSprite(blip, 615)
-    SetBlipScale(blip, 1.0)
-    SetBlipAsShortRange(blip, false)
-    BeginTextCommandSetBlipName("STRING")
-    AddTextComponentString("The Man")
-    EndTextCommandSetBlipName(blip)
-end
+known1 = false
+known2 = false
+known3 = false
+known4 = false
+known5 = false
 
 -- Alerts Police
 local function PoliceCall()
@@ -44,45 +29,157 @@ end)
 -- Checking If Player Has Item
 RegisterNetEvent('qb-oxyrun:checkifhasitem')
 AddEventHandler('qb-oxyrun:checkifhasitem', function()
+    local coords = Config.TheMan[math.random(#Config.TheMan)]
+    if known1 == true then
+        TriggerEvent("QBCore:Notify", "Go to your location and then come back", "error")
+    elseif known2 == true then
+        TriggerEvent("QBCore:Notify", "Go to your location and then come back", "error")
+    elseif known3 == true then
+        TriggerEvent("QBCore:Notify", "Go to your location and then come back", "error")
+    elseif known4 == true then
+        TriggerEvent("QBCore:Notify", "Go to your location and then come back", "error")
+    elseif known5 == true then
+        TriggerEvent("QBCore:Notify", "Go to your location and then come back", "error")
+    elseif known1 == false then
     QBCore.Functions.TriggerCallback('qb-oxyrun:hasBeer', function(HasBeer)
         if HasBeer then
     TriggerServerEvent('qb-oxyrun:removebeer')
     CreateBlip()
     TriggerEvent("QBCore:Notify", "A location has been pinged on your GPS.")
-    known = true
-    TriggerEvent('qb-oxyruns:SendEmail')
+    TriggerEvent('qb-oxyrun:setknown')
+    TriggerEvent('qb-oxyrun:SendEmail')
     print("Player Started!")
         else
             TriggerEvent("QBCore:Notify", "You dont have beer!", "error")
-        end
-    end)
+            end
+        end)
+elseif known2 == false then
+    QBCore.Functions.TriggerCallback('qb-oxyrun:hasBeer', function(HasBeer)
+        if HasBeer then
+    TriggerServerEvent('qb-oxyrun:removebeer')
+    CreateBlip()
+    TriggerEvent("QBCore:Notify", "A location has been pinged on your GPS.")
+    TriggerEvent('qb-oxyrun:setknown')
+    TriggerEvent('qb-oxyrun:SendEmail')
+    print("Player Started!")
+        else
+            TriggerEvent("QBCore:Notify", "You dont have beer!", "error")
+            end
+        end)
+elseif known3 == false then
+    QBCore.Functions.TriggerCallback('qb-oxyrun:hasBeer', function(HasBeer)
+        if HasBeer then
+    TriggerServerEvent('qb-oxyrun:removebeer')
+    CreateBlip()
+    TriggerEvent("QBCore:Notify", "A location has been pinged on your GPS.")
+    TriggerEvent('qb-oxyrun:setknown')
+    TriggerEvent('qb-oxyrun:SendEmail')
+    print("Player Started!")
+        else
+            TriggerEvent("QBCore:Notify", "You dont have beer!", "error")
+            end
+        end)
+elseif known4 == false then
+    QBCore.Functions.TriggerCallback('qb-oxyrun:hasBeer', function(HasBeer)
+        if HasBeer then
+    TriggerServerEvent('qb-oxyrun:removebeer')
+    CreateBlip()
+    TriggerEvent("QBCore:Notify", "A location has been pinged on your GPS.")
+    TriggerEvent('qb-oxyrun:setknown')
+    TriggerEvent('qb-oxyrun:SendEmail')
+    print("Player Started!")
+        else
+            TriggerEvent("QBCore:Notify", "You dont have beer!", "error")
+            end
+        end)
+elseif known5 == false then
+    QBCore.Functions.TriggerCallback('qb-oxyrun:hasBeer', function(HasBeer)
+        if HasBeer then
+    TriggerServerEvent('qb-oxyrun:removebeer')
+    CreateBlip()
+    TriggerEvent("QBCore:Notify", "A location has been pinged on your GPS.")
+    TriggerEvent('qb-oxyrun:setknown')
+    TriggerEvent('qb-oxyrun:SendEmail')
+    print("Player Started!")
+        else
+            TriggerEvent("QBCore:Notify", "You dont have beer!", "error")
+            end
+        end)
+    end
 end)
 
 -- If Player Selected No
-RegisterNetEvent('qb-oxyrun:plysn', function()
+RegisterNetEvent('qb-oxyrun:plysn')
+AddEventHandler('qb-oxyrun:plysn', function()
     TriggerEvent("QBCore:Notify", "He Called you a bitch", "error")
 end)
 
--- Checking If Player Is On List
-RegisterNetEvent('qb-oxyrun:onlistcheck', function()
-    if known then
+-- Checking If Player Is On List 1
+RegisterNetEvent('qb-oxyrun:onlistcheck1')
+AddEventHandler('qb-oxyrun:onlistcheck1', function()
+    if known1 == true then
         TriggerEvent('qb-oxyrun:takeoxy')
-    elseif known == nil then
-        TriggerEvent("QBCore:Notify", "You are not on the list!", "error")
+    elseif known1 == false then
+        TriggerEvent("QBCore:Notify", "You are not on this list!", "error")
+    end
+end)
+
+-- Checking If Player Is On List 2
+RegisterNetEvent('qb-oxyrun:onlistcheck2')
+AddEventHandler('qb-oxyrun:onlistcheck2', function()
+    if known2 == true then
+        TriggerEvent('qb-oxyrun:takeoxy')
+    elseif known2 == false then
+        TriggerEvent("QBCore:Notify", "You are not on this list!", "error")
+    end
+end)
+
+-- Checking If Player Is On List 3
+RegisterNetEvent('qb-oxyrun:onlistcheck3')
+AddEventHandler('qb-oxyrun:onlistcheck3', function()
+    if known3 == true then
+        TriggerEvent('qb-oxyrun:takeoxy')
+    elseif known3 == false then
+        TriggerEvent("QBCore:Notify", "You are not on this list!", "error")
+    end
+end)
+
+-- Checking If Player Is On List 4
+RegisterNetEvent('qb-oxyrun:onlistcheck4')
+AddEventHandler('qb-oxyrun:onlistcheck4', function()
+    if known4 == true then
+        TriggerEvent('qb-oxyrun:takeoxy')
+    elseif known4 == false then
+        TriggerEvent("QBCore:Notify", "You are not on this list!", "error")
+    end
+end)
+
+-- Checking If Player Is On List 2
+RegisterNetEvent('qb-oxyrun:onlistcheck5')
+AddEventHandler('qb-oxyrun:onlistcheck5', function()
+    if known5 == true then
+        TriggerEvent('qb-oxyrun:takeoxy')
+    elseif known5 == false then
+        TriggerEvent("QBCore:Notify", "You are not on this list!", "error")
     end
 end)
 
 -- Gives Player 1 Oxy
-RegisterNetEvent('qb-oxyrun:takeoxy', function()
+RegisterNetEvent('qb-oxyrun:takeoxy')
+AddEventHandler('qb-oxyrun:takeoxy', function()
     TriggerServerEvent('qb-oxyrun:giveoxy')
-    Wait(3)
     TriggerEvent("QBCore:Notify", "Man Gave You Bottle Of Pills.")
     PoliceCall()
-    known = nil
+    known1 = false
+    known2 = false
+    known3 = false
+    known4 = false
+    known5 = false
     DeleteBlip()
+    print("Player Finished! Pause..")
 end)
 
--- NUICALLBACK
+-- Callback for HasBeer
 RegisterNUICallback('HasBeer', function(data, cb)
     QBCore.Functions.TriggerCallback('qb-oxyrun:hasBeer', function(HasBeer)
         cb(HasBeer)
