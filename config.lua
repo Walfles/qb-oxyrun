@@ -77,14 +77,14 @@ end
 RegisterNetEvent('qb-oxyrun:setknown')
 AddEventHandler('qb-oxyrun:setknown', function()
     if rnd == 1 then
-        known1 = true
+        local known1 = true
     elseif rnd == 2 then
-        known2 = true
+        local known2 = true
     elseif rnd == 3 then
-        known3 = true
+        local known3 = true
     elseif rnd == 4 then
-        known4 = true
+        local known4 = true
     elseif rnd == 5 then
-        known5 = true
+        local known5 = true
     end
 end)
