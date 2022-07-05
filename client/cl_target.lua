@@ -1,11 +1,11 @@
 -- Walfles
-Config = {}
+Target = {}
 
 -- Start
-Config.Ped1 = {
+Target.Ped1 = {
     "a_m_o_soucent_03"
 }
-exports['qb-target']:AddTargetModel(Config.Ped1, {
+exports['qb-target']:AddTargetModel(Target.Ped1, {
 	options = {
         {
             type = "client",
@@ -18,10 +18,10 @@ exports['qb-target']:AddTargetModel(Config.Ped1, {
 })
 
 -- 1
-Config.Man1 = {
+Target.Man1 = {
     "a_m_y_bevhills_01"
 }
-exports['qb-target']:AddTargetModel(Config.Man1, {
+exports['qb-target']:AddTargetModel(Target.Man1, {
 	options = {
         {
             type = "client",
@@ -34,10 +34,10 @@ exports['qb-target']:AddTargetModel(Config.Man1, {
 })
 
 -- 2
-Config.Man2 = {
+Target.Man2 = {
     "a_m_y_clubcust_02"
 }
-exports['qb-target']:AddTargetModel(Config.Man2, {
+exports['qb-target']:AddTargetModel(Target.Man2, {
 	options = {
         {
             type = "client",
@@ -50,10 +50,10 @@ exports['qb-target']:AddTargetModel(Config.Man2, {
 })
 
 -- 3
-Config.Man3 = {
+Target.Man3 = {
     "a_m_m_prolhost_01"
 }
-exports['qb-target']:AddTargetModel(Config.Man3, {
+exports['qb-target']:AddTargetModel(Target.Man3, {
 	options = {
         {
             type = "client",
@@ -66,10 +66,10 @@ exports['qb-target']:AddTargetModel(Config.Man3, {
 })
 
 -- 4
-Config.Man4 = {
+Target.Man4 = {
     "a_m_y_business_01"
 }
-exports['qb-target']:AddTargetModel(Config.Man4, {
+exports['qb-target']:AddTargetModel(Target.Man4, {
 	options = {
         {
             type = "client",
@@ -82,10 +82,10 @@ exports['qb-target']:AddTargetModel(Config.Man4, {
 })
 
 -- 5
-Config.Man5 = {
+Target.Man5 = {
     "a_m_y_business_03"
 }
-exports['qb-target']:AddTargetModel(Config.Man5, {
+exports['qb-target']:AddTargetModel(Target.Man5, {
 	options = {
         {
             type = "client",
