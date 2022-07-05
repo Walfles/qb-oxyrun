@@ -3,11 +3,11 @@ print("Made with love by Walfles <3")
 
 -- Variable
 local QBCore = exports['qb-core']:GetCoreObject()
-known1 = false
-known2 = false
-known3 = false
-known4 = false
-known5 = false
+local known1 = false
+local known2 = false
+local known3 = false
+local known4 = false
+local known5 = false
 
 -- Alerts Police
 local function PoliceCall()
@@ -170,11 +170,11 @@ AddEventHandler('qb-oxyrun:takeoxy', function()
     TriggerServerEvent('qb-oxyrun:giveoxy')
     TriggerEvent("QBCore:Notify", "Man Gave You Bottle Of Pills.")
     PoliceCall()
-    known1 = false
-    known2 = false
-    known3 = false
-    known4 = false
-    known5 = false
+    local known1 = false
+    local known2 = false
+    local known3 = false
+    local known4 = false
+    local known5 = false
     DeleteBlip()
     print("Player Finished! Pause..")
 end)
