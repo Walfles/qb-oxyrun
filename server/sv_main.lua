@@ -15,7 +15,7 @@ end)
 RegisterServerEvent('qb-oxyrun:giveoxy')
 AddEventHandler('qb-oxyrun:giveoxy', function()
     local Player = QBCore.Functions.GetPlayer(source)
-    Player.Functions.AddItem('oxy', 1)
+    Player.Functions.AddItem('oxy', Config.OxyAmount)
     TriggerClientEvent("inventory:client:ItemBox", source, QBCore.Shared.Items["oxy"], "add")
 end)
 
