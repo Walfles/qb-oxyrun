@@ -4,6 +4,7 @@
 fx_version 'cerulean'
 game 'gta5'
 author 'Walfles'
+repository 'https://github.com/Walfles/qb-oxyrun'
 
 -- Client Files
 client_scripts {
