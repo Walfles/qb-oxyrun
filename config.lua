@@ -5,6 +5,9 @@ Config = {}
 -- You Can Edit this to your liking
 Config.MinimumOxyRunPolice = 0
 
+-- The amount of Oxy you can receive
+Config.OxyAmount = math.random(1,3)
+
 -- Location of ped
 Config.Location = {
     ["BeerMan"] = {
